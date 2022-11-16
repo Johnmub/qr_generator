@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Setting -->
+  <title>QR Generator by Arpic Studio</title>
+
+  <!-- Css -->
+</head>
+<body>
+  <!-- QR Code -->
+  <div>
+    <img alt="QR Code Generated" id="QRCodeGenerated">
+  </div>
+
+  <!-- Generate -->
+  <div>
+    <form>
+      <!-- Level -->
+      <label>
+        <span>QR Code Level</span>
+        <select name="qr_level" id="levelInput">
+          <option value="L" selected>L</option>
+          <option value="M">M</option>
+          <option value="Q">Q</option>
+          <option value="H">H</option>
+        </select>
+      </label>
+
+      <!-- Code Color -->
+      <label>
+        <span>QR Code Color</span>
+        <input type="color" name="qr_color" id="colorInput">
+      </label>
+
+      <!-- Code Opacity -->
+      <label>
+        <span>Color Opacity</span>
+        <input type="range" name="qr_opacity" min="0" max="1" step="0.01" value="1.00" id="qrOpacityInput">
+      </label>
+
+      <!-- Background Color -->
+      <label>
+        <span>Background Color</span>
+        <input type="color" name="bg_color" id="bgInput">
+      </label>
+
+      <!-- Background Opacity -->
+      <label>
+        <span>Background Opacity</span>
+        <input type="range" name="bg_opacity" min="0" max="1" step="0.01" value="0.00" id="bgOpacityInput">
+      </label>
+      
+      <!-- Url -->
+      <label>
+        <span>URl</span>
+        <input type="text" name="url_to" id="urlInput">
+      </label>
+
+      <!-- Size -->
+      <label>
+        <span>Size (px)</span>
+        <input type="number" min="150" value="150" name="code_size" id="sizeInput">
+      </label>
+
+      <!-- Submit -->
+      <input type="submit" value="Generate" id="generateQR_code">
+    </form>
+  </div>
+
+  <!-- Js -->
+  <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+  <script src="./static//js/main_v.1.0.0.js"></script>
+</body>
+</html>
